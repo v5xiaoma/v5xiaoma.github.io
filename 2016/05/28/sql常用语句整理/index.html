@@ -84,34 +84,16 @@
 
 
 
-<meta name="description" content="创建删除数据库和表
-创建数据库 create database 数据库名 charset=utf8;
-use 数据库名; 进入数据库使用
-创建表 create table 表名(键名 类型,键名 类型);
-查看数据库/表 show databases/tables;
-查看表结构 desc 表名;
-表中插入数据 insert into 表名 set 键名=&amp;#39;值&amp;#39;,键名=&amp;#39;值&amp;">
+<meta name="description" content="MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下公司。MySQL 最流行的关系型数据库管理系统，在 WEB 应用方面MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql常用语句整理">
 <meta property="og:url" content="http://v5xiaoma.github.io/2016/05/28/sql常用语句整理/index.html">
 <meta property="og:site_name" content="v5xiaoma">
-<meta property="og:description" content="创建删除数据库和表
-创建数据库 create database 数据库名 charset=utf8;
-use 数据库名; 进入数据库使用
-创建表 create table 表名(键名 类型,键名 类型);
-查看数据库/表 show databases/tables;
-查看表结构 desc 表名;
-表中插入数据 insert into 表名 set 键名=&amp;#39;值&amp;#39;,键名=&amp;#39;值&amp;">
-<meta property="og:updated_time" content="2016-05-28T11:58:51.395Z">
+<meta property="og:description" content="MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下公司。MySQL 最流行的关系型数据库管理系统，在 WEB 应用方面MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。">
+<meta property="og:updated_time" content="2016-05-29T00:41:12.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql常用语句整理">
-<meta name="twitter:description" content="创建删除数据库和表
-创建数据库 create database 数据库名 charset=utf8;
-use 数据库名; 进入数据库使用
-创建表 create table 表名(键名 类型,键名 类型);
-查看数据库/表 show databases/tables;
-查看表结构 desc 表名;
-表中插入数据 insert into 表名 set 键名=&amp;#39;值&amp;#39;,键名=&amp;#39;值&amp;">
+<meta name="twitter:description" content="MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下公司。MySQL 最流行的关系型数据库管理系统，在 WEB 应用方面MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。">
 
 
 
@@ -408,7 +390,9 @@ use 数据库名; 进入数据库使用
       
 
       
-        <h1 id="创建删除数据库和表"><a href="#创建删除数据库和表" class="headerlink" title="创建删除数据库和表"></a>创建删除数据库和表</h1><ul>
+        <p>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下公司。MySQL 最流行的关系型数据库管理系统，在 WEB 应用方面MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。</p>
+<a id="more"></a>
+<h1 id="创建删除数据库和表"><a href="#创建删除数据库和表" class="headerlink" title="创建删除数据库和表"></a>创建删除数据库和表</h1><ul>
 <li><strong>创建数据库</strong> <code>create database 数据库名 charset=utf8;</code></li>
 <li><strong>use 数据库名;</strong> <code>进入数据库使用</code></li>
 <li><strong>创建表</strong> <code>create table 表名(键名 类型,键名 类型);</code></li>
@@ -493,28 +477,21 @@ use 数据库名; 进入数据库使用
 </li>
 <li><strong>mysql_query()查询MySQL</strong> <code>$query = &quot;select * from MyTable&quot;;$result = mysql_query($query);</code> <em>说明：若SQL查询执行成功，则返回资源标识符，失败时返回FALSE。若执行更新成功，则返回TRUE，否则返回FALSE</em></li>
 <li><strong>mysql_db_query()查询MySQL</strong> <code>$query = &quot;select * from MyTable&quot;;$result = mysql_db_query(&quot;MyDatabase&quot;, $query);</code> <em>说明：为了使代码清晰，不推荐使用这个函数调用</em></li>
-<li><strong>mysql_result()获取和显示数据</strong> ``<br>  $query = “select id, name from MyTable order by name”;<br>  $result = mysql_query($query);<br>  for($count=0;$count&lt;=mysql_numrows($result);$count++){<pre><code>$c_id = mysql_result($result, 0, &quot;id&quot;);
-$c_name = mysql_result($result, 0, &quot;name&quot;);
-echo $c_id,$c_name;
-</code></pre>  } `` <em>说明：最简单、也是效率最低的数据获取函数</em></li>
-<li><p><strong>mysql_fetch_row()获取和显示数据</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">	$query = &quot;select id, name from MyTable order by name&quot;;</span><br><span class="line">	$result = mysql_query($query);</span><br><span class="line">	while (list($id, $name) = mysql_fetch_row($result)) &#123;</span><br><span class="line">		echo(&quot;Name: $name ($id) &lt; br /&gt;&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">``` *说明：函数从result_set中获取整个数据行，将值放在一个索引数组中。通常会结使list()函数使用*</span><br><span class="line">* **mysql_fetch_array()获取和显示数据**</span><br></pre></td></tr></table></figure></p>
-<p>  $query = “select id, name from MyTable order by name”;<br>  $result = mysql_query($query);<br>  while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {</p>
-<pre><code>$id = $row[&quot;id&quot;];
-$name = $row[&quot;name&quot;];
-echo &quot;Name: $name ($id)&quot;;
-</code></pre><p>  }<br>  又例:<br>  $query = “select id, name from MyTable order by name”;<br>  $result = mysql_query($query);<br>  while($row = mysql_fetch_array($result, MYSQL_NUM)) {</p>
-<pre><code>$id = $row[0];
-$name = $row[1];
-echo &quot;Name: $name ($id)&quot;;
-</code></pre><p>  }</p>
-  <figure class="highlight plain"><figcaption><span>字段名表示键，字段内容为值MYSQL_NUM: 数值索引数组，操作与mysql_fetch_ros()函数一样MYSQL_BOTH: 即作为关联数组又作为数值索引数组返回。result_type的默认值。*</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* **mysql_fetch_assoc()获取和显示数据** `array mysql_fetch_assoc (resource result_set)相当于调用 mysql_fetch_array(resource, MYSQL_ASSOC);`</span><br><span class="line">* **mysql_fetch_object()获取和显示数据**</span><br></pre></td></tr></table></figure>
-<p>  $query = “select id, name from MyTable order by name”;<br>  while ($row = mysql_fetch_object($result)) {</p>
-<pre><code>$id = $row-&gt;id;
-$name = $row-&gt;name;
-echo &quot;Name: $name ($id) &lt; br /&gt;&quot;;
-</code></pre><p>  }</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* **mysql_num_rows()所选择的记录的个数**</span><br></pre></td></tr></table></figure>
-<p>  query = “select id, name from MyTable where id &gt; 65”;<br>  $result = mysql_query($query);<br>  echo “有”.mysql_num_rows($result).”条记录的ID大于65”;<br>  ``` <em>说明：只在确定select查询所获取的记录数时才有用。</em></p>
+<li><p><strong>mysql_result()获取和显示数据</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$query = &quot;select id, name from MyTable order by name&quot;;</span><br><span class="line">$result = mysql_query($query);</span><br><span class="line">for($count=0;$count&lt;=mysql_numrows($result);$count++)&#123;</span><br><span class="line">	$c_id = mysql_result($result, 0, &quot;id&quot;);</span><br><span class="line">	$c_name = mysql_result($result, 0, &quot;name&quot;);</span><br><span class="line">	echo $c_id,$c_name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  <em>说明：最简单、也是效率最低的数据获取函数</em></p>
+</li>
+<li><p><strong>mysql_fetch_row()获取和显示数据</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$query = &quot;select id, name from MyTable order by name&quot;;</span><br><span class="line">$result = mysql_query($query);</span><br><span class="line">while (list($id, $name) = mysql_fetch_row($result)) &#123;</span><br><span class="line">	echo(&quot;Name: $name ($id) &lt; br /&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  <em>说明：函数从result_set中获取整个数据行，将值放在一个索引数组中。通常会结使list()函数使用</em></p>
+</li>
+<li><p><strong>mysql_fetch_array()获取和显示数据</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$query = &quot;select id, name from MyTable order by name&quot;;</span><br><span class="line">$result = mysql_query($query);</span><br><span class="line">while($row = mysql_fetch_array($result, MYSQL_ASSOC)) &#123;</span><br><span class="line">	$id = $row[&quot;id&quot;];</span><br><span class="line">	$name = $row[&quot;name&quot;];</span><br><span class="line">	echo &quot;Name: $name ($id)&quot;;</span><br><span class="line">&#125;</span><br><span class="line">又例:</span><br><span class="line">$query = &quot;select id, name from MyTable order by name&quot;;</span><br><span class="line">$result = mysql_query($query);</span><br><span class="line">while($row = mysql_fetch_array($result, MYSQL_NUM)) &#123;</span><br><span class="line">	$id = $row[0];</span><br><span class="line">	$name = $row[1];</span><br><span class="line">	echo &quot;Name: $name ($id)&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  <em>说明：result_type的值有：MYSQL_ASSOC: 字段名表示键，字段内容为值MYSQL_NUM: 数值索引数组，操作与mysql_fetch_ros()函数一样MYSQL_BOTH: 即作为关联数组又作为数值索引数组返回。result_type的默认值。</em></p>
+</li>
+<li><strong>mysql_fetch_assoc()获取和显示数据</strong> <code>array mysql_fetch_assoc (resource result_set)相当于调用 mysql_fetch_array(resource, MYSQL_ASSOC);</code></li>
+<li><p><strong>mysql_fetch_object()获取和显示数据</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$query = &quot;select id, name from MyTable order by name&quot;;</span><br><span class="line">while ($row = mysql_fetch_object($result)) &#123;</span><br><span class="line">	$id = $row-&gt;id;</span><br><span class="line">	$name = $row-&gt;name;</span><br><span class="line">	echo &quot;Name: $name ($id) &lt; br /&gt;&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  <em>说明：返回一个对象，在操作上与mysql_fetch_array()相同</em></p>
+</li>
+<li><p><strong>mysql_num_rows()所选择的记录的个数</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query = &quot;select id, name from MyTable where id &gt; 65&quot;;</span><br><span class="line">$result = mysql_query($query);</span><br><span class="line">echo &quot;有&quot;.mysql_num_rows($result).&quot;条记录的ID大于65&quot;;</span><br></pre></td></tr></table></figure></p>
+<p>  <em>说明：只在确定select查询所获取的记录数时才有用。</em></p>
 </li>
 <li><strong>mysql_affected_rows()</strong></li>
 </ul>

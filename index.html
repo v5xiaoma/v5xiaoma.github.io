@@ -395,119 +395,12 @@
 
       
         
-          
-            <h1 id="创建删除数据库和表"><a href="#创建删除数据库和表" class="headerlink" title="创建删除数据库和表"></a>创建删除数据库和表</h1><ul>
-<li><strong>创建数据库</strong> <code>create database 数据库名 charset=utf8;</code></li>
-<li><strong>use 数据库名;</strong> <code>进入数据库使用</code></li>
-<li><strong>创建表</strong> <code>create table 表名(键名 类型,键名 类型);</code></li>
-<li><strong>查看数据库/表</strong> <code>show databases/tables;</code></li>
-<li><strong>查看表结构</strong> <code>desc 表名;</code></li>
-<li><strong>表中插入数据</strong> <code>insert into 表名 set 键名=&#39;值&#39;,键名=&#39;值&#39;...;</code></li>
-<li><strong>多条数据插入</strong> <code>insert into 表名(键名,键名,...) values(&#39;值&#39;,&#39;值&#39;,...),(...);</code></li>
-<li><strong>删除数据库或表</strong> <code>drop database 数据库名/表名 if exists;</code></li>
-<li><strong>复制表结构到新表</strong> <code>create table 新数据库名 like 旧数据库名;</code></li>
-<li><strong>复制表数据到新表</strong> <code>insert into 新数据库名 select * from 旧数据库名;</code></li>
-<li><strong>赋值表结构和数据到新表</strong> <code>create table 新数据库名 select * from 旧数据库;</code></li>
-</ul>
-<h1 id="表键结构类型"><a href="#表键结构类型" class="headerlink" title="表键结构类型"></a>表键结构类型</h1><ul>
-<li><strong>小数据类形/数据类形</strong> <code>tinyint/int</code></li>
-<li><strong>字符串型/会随内容改变大小的字符串型</strong> <code>char/varchar</code></li>
-<li><strong>特殊</strong> <code>unsigned(无符号数)/primary key(主键)/auto_increment(自增)/unique(唯一)/default(默认值)/zerofill(自动填充0)</code></li>
-<li><strong>类似单选</strong> <code>enum(&#39;男&#39;,&#39;女&#39;);</code></li>
-<li><strong>类似多选</strong> <code>set(&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;);</code></li>
-</ul>
-<h1 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h1><ul>
-<li><strong>查询数据库表中内容</strong> <code>select * from 表名;</code></li>
-<li><strong>查询数据库表中name条对应数据，并更名newname</strong> <code>select name as newname from 表名;</code></li>
-<li><strong>查询表中符合条件 和/或 条件的数据</strong> <code>select * from 表名 where 条件 and/or 条件;</code></li>
-<li><strong>连接键名输出</strong> <code>select concat(&#39;连接内容&#39;,键名) from 表名;</code></li>
-<li><strong>去掉重复的数据</strong> <code>select distinct 键名 from 表名;</code></li>
-<li><strong>查询set类型字段</strong> <code>select * from 表名 where find_in_set(&#39;推荐&#39; ,存入的名);</code></li>
-<li><strong>查询set类型字段</strong> <code>select * from 表名 where flag like ‘%置顶%’</code></li>
-<li><strong>查询set类型字段</strong> <code>select * from 表名 where flag=&#39;推荐,图文&#39;;</code></li>
-<li><strong>查找 字段值是null 的</strong> <code>select * from 表名 where title is null;</code></li>
-<li><strong>字段值为空的数据并返回空</strong> <code>select 键名,ifnull(age,&quot;空&quot;) from 表名;</code></li>
-<li><strong>排序 降序排列/升序排列（默认）</strong> <code>select * from 表名 order by 排序依据的键名 desc/asc;</code></li>
-<li><strong>limit(m,n) 取出从m开始的n条数据， m以0开始记数</strong> <code>select * from 表名 order by 排序依据的键名 desc limit m,n;</code></li>
-<li><strong>between 值1 and 值2在值1与值2区间内检索内容</strong> <code>select * from 表名 where 判断的字段名 between m and n;</code></li>
-<li><strong>In(值1,值2….) 检测检索值是否在in表达式指定的值当中</strong> <code>select * from 表名 where 判断的字段名 in(12,20,22);</code></li>
-<li><strong>查找名字当中 包含a的同学</strong> <code>select * from 表名 where sname like &#39;%a%&#39;;</code></li>
-<li><strong>left从左侧取字符串截取学生名字的前n位</strong> <code>select left(查找字段,n) as 新名 from 表名;</code></li>
-<li><strong>mid 从中间取字符串,参数n为起始字符参数m为长度从中间截取 第一个参数 从几号开始（起始值1），第二个参数 截几位</strong> <code>select mid(查找字段,n,m) from 表名</code></li>
-<li><strong>rand()随机数//随机找n个同学</strong> <code>select * from 表名 order by rand() limit n;</code></li>
-</ul>
-<h1 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h1><ul>
-<li><strong>关联 表时 使用别名</strong> <code>select * from city as c inner join zone as z on c.zid = z.zid;</code></li>
-<li><strong>自连接</strong> <code>select s2.username,s1.username from student s1 join student s2 on s1.class=s2.class where s1.username =&#39;李磊&#39;;</code></li>
-</ul>
-<h1 id="数据库修改操作"><a href="#数据库修改操作" class="headerlink" title="数据库修改操作"></a>数据库修改操作</h1><ul>
-<li><strong>replace如果主键sid 不存在13，执行插入操作。主键存在sid=13 执行修改操作</strong> <code>replace into 表名(字段,字段,...) values(值1,&#39;值2&#39;,...);</code></li>
-<li><strong>update 更新操作//注意：要加where条件，否则会更新表中全部数据</strong> <code>update 表名 set 字段=&#39;新值&#39; where 条件(选择哪一条修改);</code></li>
-<li><strong>delete 删除操作//注意：要加where条件,否则会删除表中全部数据</strong> <code>delete from 表名 where 条件(选择哪一条删除);</code></li>
-<li><strong>alter table 表名 rename 新表名</strong> <code>alter table 表名 rename 新表名;</code></li>
-<li><strong>修改字段类型</strong> <code>alter table 表名 modify 字段名 存储类型;</code></li>
-<li><strong>修改字段名，并且更名，first字段放到第一，after 字段放到那个字段后面</strong> <code>alter table 表名 change 旧字段 新字段 存储类型 [ first | after 字段]</code></li>
-<li><strong>追加字段</strong> <code>alter table 表名 add 字段 存储类型 [first | after 字段]</code></li>
-<li><strong>删除字段</strong> <code>Alter table 表名 drop 字段名</code></li>
-<li><strong>删除主键,需先去掉自增属性</strong> <code>alter table s modify 字段名 存储类型（不写auto_increment）;alter table s drop primary key;</code></li>
-<li><strong>添加主键id</strong> <code>alter table cb add primary key (id);</code></li>
-</ul>
-<h1 id="分组统计"><a href="#分组统计" class="headerlink" title="分组统计"></a>分组统计</h1><ul>
-<li><strong>count 统计数量</strong> <code>select count(要统计的字段) from 表名;</code></li>
-<li><strong>min () 取最小值</strong> <code>select min(要取最小值的字段) from 表名;</code></li>
-<li><strong>max() 取最大值</strong> <code>select max(要取最大值的字段) from 表名;</code></li>
-<li><strong>sum()计算和</strong> <code>select sum(要求和的字段) from 表名;</code></li>
-<li><strong>avg()求平均数</strong> <code>select avg(要求平均数的字段) from 表名;</code></li>
-<li><strong>分组统计</strong> <code>select class,count(*) from student group by 用什么分组;</code></li>
-<li><strong>having在分组之后</strong> <code>select * from student where money&gt;10000 group by class having count(*)&gt;1;</code></li>
-<li><strong>关键字顺序</strong> <code>1,where 2,group by 3,having 4,order by 5,limit</code></li>
-</ul>
-<h1 id="mysqli连接数据库"><a href="#mysqli连接数据库" class="headerlink" title="mysqli连接数据库"></a>mysqli连接数据库</h1><ul>
-<li><strong>查看php配置项信息</strong> <code>phpinfo();</code></li>
-<li><strong>连接数据库，用$mysqli接收@new mysqli(‘主机名’,’用户名’,’密码’,’数据库’);</strong> <code>$mysqli = @new mysqli(&#39;localhost&#39;,&#39;root&#39;,&#39;&#39;,&#39;ma&#39;);</code></li>
-<li><strong>connect_error数据库里面的函数用于记录错误信息</strong> <code>if($mysqli-&gt;connect_errno){echo $mysqli-&gt;connect_error;}</code></li>
-<li><strong>设置字符集为utf8 query()执行里面的sql语句</strong> <code>$mysqli-&gt;query(&#39;SET NAMES UTF8&#39;);</code></li>
-<li><strong>执行sql语句操作 query()执行里面的sql语句</strong> <code>$mysqli-&gt;query(&#39;SELECT * FROM stu&#39;);</code></li>
-<li><strong>affected_rows获取受影响条数</strong> <code>$mysqli-&gt;affected_rows();</code></li>
-<li><strong>insert_id获取新增的主键,修改删除不受影响,返回值为0;</strong> <code>$mysqli-&gt;insert_id();</code></li>
-<li><strong>$result-&gt;fetch_assoc()取出数据库中的一条结果;$result是获取的执行结果query;</strong> <code>$arr=array();while($a=$result-&gt;fetch_assoc()){$arr[]=$a;}</code></li>
-</ul>
-<h1 id="php操作mysql"><a href="#php操作mysql" class="headerlink" title="php操作mysql"></a>php操作mysql</h1><ul>
-<li><strong>mysql_connect()建立数据库连接</strong> <code>$conn = @mysql_connect(&quot;localhost&quot;, &quot;username&quot;, &quot;password&quot;) or die(&quot;不能连接到Mysql Server&quot;);</code> <em>说明：使用该连接必须显示的关闭连接</em></li>
-<li><strong>mysql_pconnect()建立数据库连接</strong> <code>$conn = @mysql_pconnect(&quot;localhost&quot;, &quot;username&quot;, &quot;password&quot;) or dir(&quot;不能连接到MysqlServer&quot;);</code> <em>说明：使用该连接函数不需要显示的关闭连接，它相当于使用了连接池</em></li>
-<li><p><strong>mysql_close()关闭数据库连接</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$conn = @mysql_connect(&quot;localhost&quot;, &quot;username&quot;, &quot;password&quot;) or die(&quot;不能连接到Mysql Server&quot;);</span><br><span class="line">@mysql_select_db(&quot;MyDatabase&quot;) or die(&quot;不能选择这个数据库，或数据库不存在&quot;);</span><br><span class="line">echo &quot;你已经连接到MyDatabase数据库&quot;;</span><br><span class="line">mysql_close();</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p><strong>mysql_select_db()选择数据库</strong> <code>@mysql_select_db(&quot;MyDatabase&quot;) or die(&quot;不能选择这个数据库，或数据库不存在&quot;);</code></p>
-</li>
-<li><strong>mysql_query()查询MySQL</strong> <code>$query = &quot;select * from MyTable&quot;;$result = mysql_query($query);</code> <em>说明：若SQL查询执行成功，则返回资源标识符，失败时返回FALSE。若执行更新成功，则返回TRUE，否则返回FALSE</em></li>
-<li><strong>mysql_db_query()查询MySQL</strong> <code>$query = &quot;select * from MyTable&quot;;$result = mysql_db_query(&quot;MyDatabase&quot;, $query);</code> <em>说明：为了使代码清晰，不推荐使用这个函数调用</em></li>
-<li><strong>mysql_result()获取和显示数据</strong> ``<br>  $query = “select id, name from MyTable order by name”;<br>  $result = mysql_query($query);<br>  for($count=0;$count&lt;=mysql_numrows($result);$count++){<pre><code>$c_id = mysql_result($result, 0, &quot;id&quot;);
-$c_name = mysql_result($result, 0, &quot;name&quot;);
-echo $c_id,$c_name;
-</code></pre>  } `` <em>说明：最简单、也是效率最低的数据获取函数</em></li>
-<li><p><strong>mysql_fetch_row()获取和显示数据</strong> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">	$query = &quot;select id, name from MyTable order by name&quot;;</span><br><span class="line">	$result = mysql_query($query);</span><br><span class="line">	while (list($id, $name) = mysql_fetch_row($result)) &#123;</span><br><span class="line">		echo(&quot;Name: $name ($id) &lt; br /&gt;&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">``` *说明：函数从result_set中获取整个数据行，将值放在一个索引数组中。通常会结使list()函数使用*</span><br><span class="line">* **mysql_fetch_array()获取和显示数据**</span><br></pre></td></tr></table></figure></p>
-<p>  $query = “select id, name from MyTable order by name”;<br>  $result = mysql_query($query);<br>  while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {</p>
-<pre><code>$id = $row[&quot;id&quot;];
-$name = $row[&quot;name&quot;];
-echo &quot;Name: $name ($id)&quot;;
-</code></pre><p>  }<br>  又例:<br>  $query = “select id, name from MyTable order by name”;<br>  $result = mysql_query($query);<br>  while($row = mysql_fetch_array($result, MYSQL_NUM)) {</p>
-<pre><code>$id = $row[0];
-$name = $row[1];
-echo &quot;Name: $name ($id)&quot;;
-</code></pre><p>  }</p>
-  <figure class="highlight plain"><figcaption><span>字段名表示键，字段内容为值MYSQL_NUM: 数值索引数组，操作与mysql_fetch_ros()函数一样MYSQL_BOTH: 即作为关联数组又作为数值索引数组返回。result_type的默认值。*</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* **mysql_fetch_assoc()获取和显示数据** `array mysql_fetch_assoc (resource result_set)相当于调用 mysql_fetch_array(resource, MYSQL_ASSOC);`</span><br><span class="line">* **mysql_fetch_object()获取和显示数据**</span><br></pre></td></tr></table></figure>
-<p>  $query = “select id, name from MyTable order by name”;<br>  while ($row = mysql_fetch_object($result)) {</p>
-<pre><code>$id = $row-&gt;id;
-$name = $row-&gt;name;
-echo &quot;Name: $name ($id) &lt; br /&gt;&quot;;
-</code></pre><p>  }</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* **mysql_num_rows()所选择的记录的个数**</span><br></pre></td></tr></table></figure>
-<p>  query = “select id, name from MyTable where id &gt; 65”;<br>  $result = mysql_query($query);<br>  echo “有”.mysql_num_rows($result).”条记录的ID大于65”;<br>  ``` <em>说明：只在确定select查询所获取的记录数时才有用。</em></p>
-</li>
-<li><strong>mysql_affected_rows()</strong></li>
-</ul>
-
-          
+          <p>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下公司。MySQL 最流行的关系型数据库管理系统，在 WEB 应用方面MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/28/sql常用语句整理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
