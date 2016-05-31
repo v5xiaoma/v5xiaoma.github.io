@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://v5xiaoma.github.io/2016/05/31/js打印数组-js打印对象的方法/index.html">
 <meta property="og:site_name" content="v5xiaoma">
 <meta property="og:description" content="js整理出来的常用方法,当用到时可以直接拿来使用">
-<meta property="og:updated_time" content="2016-05-31T02:49:22.168Z">
+<meta property="og:updated_time" content="2016-05-31T02:55:40.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js常用方法整理">
 <meta name="twitter:description" content="js整理出来的常用方法,当用到时可以直接拿来使用">
@@ -394,6 +394,9 @@
 <a id="more"></a>
 <h1 id="打印数组"><a href="#打印数组" class="headerlink" title="打印数组"></a>打印数组</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function print_array(arr)&#123;  </span><br><span class="line">    for(var key in arr)&#123;  </span><br><span class="line">        if(typeof(arr[key])==&apos;array&apos;||typeof(arr[key])==&apos;object&apos;)&#123;     //递归调用    </span><br><span class="line">            print_array(arr[key]);  </span><br><span class="line">        &#125;else&#123;  </span><br><span class="line">            document.write(key + &apos; = &apos; + arr[key] + &apos;&lt;br&gt;&apos;);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="打印对象"><a href="#打印对象" class="headerlink" title="打印对象"></a>打印对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function writeObj(obj)&#123;  </span><br><span class="line">    var description = &quot;&quot;;  </span><br><span class="line">    for(var i in obj)&#123;    </span><br><span class="line">        var property=obj[i];    </span><br><span class="line">        description+=i+&quot; = &quot;+property+&quot;\n&quot;;   </span><br><span class="line">    &#125;    </span><br><span class="line">    alert(description);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="获取css的非行间样式呢"><a href="#获取css的非行间样式呢" class="headerlink" title="获取css的非行间样式呢"></a>获取css的非行间样式呢</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function getStyle(obj, attr)</span><br><span class="line">&#123;</span><br><span class="line">    if(obj.currentStyle)</span><br><span class="line">    &#123;</span><br><span class="line">        return obj.currentStyle[attr];</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        return getComputedStyle(obj,false)[attr];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>用js的style属性可以获得html标签的样式，但是不能获取非行间样式。那么怎么用js获取css的非行间样式呢？在IE下可以用currentStyle，而在火狐下面我们需要用到getComputedStyle。</em></p>
+
       
     </div>
 
@@ -551,7 +554,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#打印数组"><span class="nav-number">1.</span> <span class="nav-text">打印数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打印对象"><span class="nav-number">2.</span> <span class="nav-text">打印对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#打印数组"><span class="nav-number">1.</span> <span class="nav-text">打印数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打印对象"><span class="nav-number">2.</span> <span class="nav-text">打印对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取css的非行间样式呢"><span class="nav-number">3.</span> <span class="nav-text">获取css的非行间样式呢</span></a></li></ol></div>
             
           </div>
         </section>
