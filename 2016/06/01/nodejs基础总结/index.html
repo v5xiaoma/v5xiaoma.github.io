@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习,前端,javascript," />
+  <meta name="keywords" content="学习,前端,nodejs," />
 
 
 
@@ -84,16 +84,39 @@
 
 
 
-<meta name="description" content="js整理出来的常用方法,当用到时可以直接拿来使用">
+<meta name="description" content="操作系统(OS)提供一些基本的操作系统相关函数。 调用这个模块 require(&amp;#39;os&amp;#39;);
+os.tmpdir()返回操作系统默认的临时文件目录。例：
+os.endianness()返回 CPU 的字节序，可能的是 “BE” =&amp;gt;(Big endian：将高序字节存储在起始地址) 或  “LE” =&amp;gt;(Little endian：将低序字节存储在起始地址)。例：
+os">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js常用方法整理">
-<meta property="og:url" content="http://v5xiaoma.github.io/2016/05/31/js打印数组-js打印对象的方法/index.html">
+<meta property="og:title" content="nodejs基础总结">
+<meta property="og:url" content="http://v5xiaoma.github.io/2016/06/01/nodejs基础总结/index.html">
 <meta property="og:site_name" content="v5xiaoma">
-<meta property="og:description" content="js整理出来的常用方法,当用到时可以直接拿来使用">
-<meta property="og:updated_time" content="2016-05-31T08:47:34.942Z">
+<meta property="og:description" content="操作系统(OS)提供一些基本的操作系统相关函数。 调用这个模块 require(&amp;#39;os&amp;#39;);
+os.tmpdir()返回操作系统默认的临时文件目录。例：
+os.endianness()返回 CPU 的字节序，可能的是 “BE” =&amp;gt;(Big endian：将高序字节存储在起始地址) 或  “LE” =&amp;gt;(Little endian：将低序字节存储在起始地址)。例：
+os">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-tmpdir.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-endianness.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-hostname.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-type.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-platform.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-arch.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-release.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-uptime.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-loadavg.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-totalmem.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-freemem.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-cpus.png">
+<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-networkInterface.png">
+<meta property="og:updated_time" content="2016-06-01T08:47:18.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js常用方法整理">
-<meta name="twitter:description" content="js整理出来的常用方法,当用到时可以直接拿来使用">
+<meta name="twitter:title" content="nodejs基础总结">
+<meta name="twitter:description" content="操作系统(OS)提供一些基本的操作系统相关函数。 调用这个模块 require(&amp;#39;os&amp;#39;);
+os.tmpdir()返回操作系统默认的临时文件目录。例：
+os.endianness()返回 CPU 的字节序，可能的是 “BE” =&amp;gt;(Big endian：将高序字节存储在起始地址) 或  “LE” =&amp;gt;(Little endian：将低序字节存储在起始地址)。例：
+os">
+<meta name="twitter:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-tmpdir.png">
 
 
 
@@ -111,7 +134,7 @@
   };
 </script>
 
-  <title> js常用方法整理 | v5xiaoma </title>
+  <title> nodejs基础总结 | v5xiaoma </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -291,7 +314,7 @@
             
             
               
-                js常用方法整理
+                nodejs基础总结
               
             
           </h1>
@@ -303,8 +326,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-31T10:44:27+08:00" content="2016-05-31">
-              2016-05-31
+            <time itemprop="dateCreated" datetime="2016-06-01T15:45:54+08:00" content="2016-06-01">
+              2016-06-01
             </time>
           </span>
 
@@ -341,8 +364,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习/前端/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
+                  <a href="/categories/学习/前端/nodejs/" itemprop="url" rel="index">
+                    <span itemprop="name">nodejs</span>
                   </a>
                 </span>
 
@@ -357,8 +380,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/31/js打印数组-js打印对象的方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/js打印数组-js打印对象的方法/" itemprop="commentsCount"></span>
+                <a href="/2016/06/01/nodejs基础总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/01/nodejs基础总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -368,7 +391,7 @@
 
           
           
-             <span id="/2016/05/31/js打印数组-js打印对象的方法/" class="leancloud_visitors" data-flag-title="js常用方法整理">
+             <span id="/2016/06/01/nodejs基础总结/" class="leancloud_visitors" data-flag-title="nodejs基础总结">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -390,12 +413,21 @@
       
 
       
-        <p>js整理出来的常用方法,当用到时可以直接拿来使用</p>
-<a id="more"></a>
-<h1 id="打印数组"><a href="#打印数组" class="headerlink" title="打印数组"></a>打印数组</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function print_array(arr)&#123;  </span><br><span class="line">    for(var key in arr)&#123;  </span><br><span class="line">        if(typeof(arr[key])==&apos;array&apos;||typeof(arr[key])==&apos;object&apos;)&#123;     //递归调用    </span><br><span class="line">            print_array(arr[key]);  </span><br><span class="line">        &#125;else&#123;  </span><br><span class="line">            document.write(key + &apos; = &apos; + arr[key] + &apos;&lt;br&gt;&apos;);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="打印对象"><a href="#打印对象" class="headerlink" title="打印对象"></a>打印对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function writeObj(obj)&#123;  </span><br><span class="line">    var description = &quot;&quot;;  </span><br><span class="line">    for(var i in obj)&#123;    </span><br><span class="line">        var property=obj[i];    </span><br><span class="line">        description+=i+&quot; = &quot;+property+&quot;\n&quot;;   </span><br><span class="line">    &#125;    </span><br><span class="line">    alert(description);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="获取css的非行间样式呢"><a href="#获取css的非行间样式呢" class="headerlink" title="获取css的非行间样式呢"></a>获取css的非行间样式呢</h1><p><em>用js的style属性可以获得html标签的样式，但是不能获取非行间样式。那么怎么用js获取css的非行间样式呢？在IE下可以用currentStyle，而在火狐下面我们需要用到getComputedStyle。</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function getStyle(obj, attr)</span><br><span class="line">&#123;</span><br><span class="line">    if(obj.currentStyle)</span><br><span class="line">    &#123;</span><br><span class="line">        return obj.currentStyle[attr];</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        return getComputedStyle(obj,false)[attr];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="获取类选择符"><a href="#获取类选择符" class="headerlink" title="获取类选择符"></a>获取类选择符</h1><p><em>在使用原生javascript时，获取类选择符时，即使用getElementByClassName，它在Firefox和IE下是不能兼容。<br>Firefox下是可以用它获取的到元素而IE不行，一般框架都会实现该方法，达到在IE和Firefox下兼容的问题。</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function getByClassName(className)&#123;  </span><br><span class="line">	if(document.getElementByClassName)&#123;  </span><br><span class="line">		return document.getElementByClassName(className) //FF下因为有此方法，所以可以直接获取到；  </span><br><span class="line">	&#125;  </span><br><span class="line">	var nodes=document.getElementsByTagName(&quot;*&quot;);//获取页面里所有元素，因为他会匹配全页面元素，所以性能上有缺陷，但是可以约束他的搜索范围；  </span><br><span class="line">	var arr=[];//用来保存符合的className；  </span><br><span class="line">	for(var i=0;i&lt;nodes.length;i++)&#123;  </span><br><span class="line">		if(hasClass(nodes[i],className)) arr.push(nodes[i]);  </span><br><span class="line">	&#125;  </span><br><span class="line">	return arr;  </span><br><span class="line">&#125; </span><br><span class="line">function hasClass(node,className)&#123;  </span><br><span class="line">	var cNames=node.className.split(/\s+/);//根据空格来分割node里的元素；  </span><br><span class="line">	for(var i=0;i&lt;cNames.length;i++)&#123;  </span><br><span class="line">		if(cNames[i]==className) return true;  </span><br><span class="line">	&#125;  </span><br><span class="line">	return false;  </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">另从网上看到一种解决的办法：</span><br><span class="line">由于IE4之后对 document.all 都有支持，所以可以简单的利用是否支持 document.all判断是否为IE。</span><br><span class="line">如果不是IE，则用W3C DOM的document.getElementByTagName(&apos;*&apos;)取代all</span><br><span class="line"></span><br><span class="line">function getElementsByClassName (className) &#123;</span><br><span class="line">	var all = document.all ? document.all : document.getElementsByTagName(&apos;*&apos;);</span><br><span class="line">	var elements = new Array();</span><br><span class="line">	for (var e = 0; e &lt; all.length; e++) &#123;</span><br><span class="line">		if (all[e].className == className) &#123;</span><br><span class="line">			elements[elements.length] = all[e];</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return elements;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="操作系统-OS"><a href="#操作系统-OS" class="headerlink" title="操作系统(OS)"></a>操作系统(OS)</h1><p><em>提供一些基本的操作系统相关函数。</em> <strong>调用这个模块</strong> <code>require(&#39;os&#39;);</code></p>
+<h2 id="os-tmpdir"><a href="#os-tmpdir" class="headerlink" title="os.tmpdir()"></a>os.tmpdir()</h2><p><em>返回操作系统默认的临时文件目录。例：</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-tmpdir.png" alt="os-tmpdir"></p>
+<h2 id="os-endianness"><a href="#os-endianness" class="headerlink" title="os.endianness()"></a>os.endianness()</h2><p><em>返回 CPU 的字节序，可能的是</em> <strong>“BE”</strong> <em>=&gt;(Big endian：将高序字节存储在起始地址) 或 </em> <strong>“LE”</strong> <em>=&gt;(Little endian：将低序字节存储在起始地址)。例：</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-endianness.png" alt="os-endianness"></p>
+<h2 id="os-hostname"><a href="#os-hostname" class="headerlink" title="os.hostname()"></a>os.hostname()</h2><p><em>返回操作系统的主机名。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-hostname.png" alt="os-hostname"></p>
+<h2 id="os-type"><a href="#os-type" class="headerlink" title="os.type()"></a>os.type()</h2><p><em>返回操作系统名称。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-type.png" alt="os-type"></p>
+<h2 id="os-platform"><a href="#os-platform" class="headerlink" title="os.platform()"></a>os.platform()</h2><p><em>返回操作系统平台</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-platform.png" alt="os-platform"></p>
+<h2 id="os-arch"><a href="#os-arch" class="headerlink" title="os.arch()"></a>os.arch()</h2><p><em>返回操作系统 CPU 架构，可能的值有 “x64”、”arm” 和 “ia32”。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-arch.png" alt="os-arch"></p>
+<h2 id="os-release"><a href="#os-release" class="headerlink" title="os.release()"></a>os.release()</h2><p><em>返回操作系统的发行版本。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-release.png" alt="os-release"></p>
+<h2 id="os-uptime"><a href="#os-uptime" class="headerlink" title="os.uptime()"></a>os.uptime()</h2><p><em>返回操作系统运行的时间，以秒为单位。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-uptime.png" alt="os-uptime"></p>
+<h2 id="os-loadavg"><a href="#os-loadavg" class="headerlink" title="os.loadavg()"></a>os.loadavg()</h2><p><em>返回一个包含 1、5、15 分钟平均负载的数组。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-loadavg.png" alt="os-loadavg"></p>
+<h2 id="os-totalmem"><a href="#os-totalmem" class="headerlink" title="os.totalmem()"></a>os.totalmem()</h2><p><em>返回系统内存总量，单位为字节。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-totalmem.png" alt="os-totalmem"></p>
+<h2 id="os-freemem"><a href="#os-freemem" class="headerlink" title="os.freemem()"></a>os.freemem()</h2><p><em>返回操作系统空闲内存量，单位是字节。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-freemem.png" alt="os-freemem"></p>
+<h2 id="os-cpus"><a href="#os-cpus" class="headerlink" title="os.cpus()"></a>os.cpus()</h2><p><em>返回一个对象数组，包含所安装的每个 CPU/内核的信息：型号、速度（单位 MHz）、时间（一个包含 user、nice、sys、idle 和 irq 所使用 CPU/内核毫秒数的对象）。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-cpus.png" alt="os-cpus"></p>
+<h2 id="os-networkInterfaces"><a href="#os-networkInterfaces" class="headerlink" title="os.networkInterfaces()"></a>os.networkInterfaces()</h2><p><em>获取网络接口的一个列表信息：返回一个二维数组，每一个内层数组代表一个网络接口（物理网卡或者虚拟网卡）</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-networkInterface.png" alt="os-networkInterfaces"></p>
+<h2 id="os-EOL"><a href="#os-EOL" class="headerlink" title="os.EOL"></a>os.EOL</h2><p><em>一个定义了操作系统的一行结束的标识的常量。</em><br><em>系统的行结束符是什么，windows为\r\n，unix和unix-like为\n，mac和ios为\r</em></p>
 
       
     </div>
@@ -421,7 +453,7 @@
           
             <a href="/tags/前端/" rel="tag">#前端</a>
           
-            <a href="/tags/javascript/" rel="tag">#javascript</a>
+            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
           
         </div>
       
@@ -430,17 +462,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/29/linux基础知识整理/" rel="next" title="linux基础知识整理">
-                <i class="fa fa-chevron-left"></i> linux基础知识整理
+              <a href="/2016/05/31/js打印数组-js打印对象的方法/" rel="next" title="js常用方法整理">
+                <i class="fa fa-chevron-left"></i> js常用方法整理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/01/nodejs基础总结/" rel="prev" title="nodejs基础总结">
-                nodejs基础总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,8 +494,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/31/js打印数组-js打印对象的方法/"
-           data-title="js常用方法整理" data-url="http://v5xiaoma.github.io/2016/05/31/js打印数组-js打印对象的方法/">
+      <div class="ds-thread" data-thread-key="2016/06/01/nodejs基础总结/"
+           data-title="nodejs基础总结" data-url="http://v5xiaoma.github.io/2016/06/01/nodejs基础总结/">
       </div>
     
   </div>
@@ -558,7 +586,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#打印数组"><span class="nav-number">1.</span> <span class="nav-text">打印数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打印对象"><span class="nav-number">2.</span> <span class="nav-text">打印对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取css的非行间样式呢"><span class="nav-number">3.</span> <span class="nav-text">获取css的非行间样式呢</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取类选择符"><span class="nav-number">4.</span> <span class="nav-text">获取类选择符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统-OS"><span class="nav-number">1.</span> <span class="nav-text">操作系统(OS)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#os-tmpdir"><span class="nav-number">1.1.</span> <span class="nav-text">os.tmpdir()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-endianness"><span class="nav-number">1.2.</span> <span class="nav-text">os.endianness()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-hostname"><span class="nav-number">1.3.</span> <span class="nav-text">os.hostname()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-type"><span class="nav-number">1.4.</span> <span class="nav-text">os.type()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-platform"><span class="nav-number">1.5.</span> <span class="nav-text">os.platform()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-arch"><span class="nav-number">1.6.</span> <span class="nav-text">os.arch()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-release"><span class="nav-number">1.7.</span> <span class="nav-text">os.release()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-uptime"><span class="nav-number">1.8.</span> <span class="nav-text">os.uptime()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-loadavg"><span class="nav-number">1.9.</span> <span class="nav-text">os.loadavg()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-totalmem"><span class="nav-number">1.10.</span> <span class="nav-text">os.totalmem()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-freemem"><span class="nav-number">1.11.</span> <span class="nav-text">os.freemem()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-cpus"><span class="nav-number">1.12.</span> <span class="nav-text">os.cpus()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-networkInterfaces"><span class="nav-number">1.13.</span> <span class="nav-text">os.networkInterfaces()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-EOL"><span class="nav-number">1.14.</span> <span class="nav-text">os.EOL</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

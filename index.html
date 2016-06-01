@@ -293,6 +293,173 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/01/nodejs基础总结/" itemprop="url">
+                  nodejs基础总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-01T15:45:54+08:00" content="2016-06-01">
+              2016-06-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习/前端/nodejs/" itemprop="url" rel="index">
+                    <span itemprop="name">nodejs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/01/nodejs基础总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/01/nodejs基础总结/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/01/nodejs基础总结/" class="leancloud_visitors" data-flag-title="nodejs基础总结">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="操作系统-OS"><a href="#操作系统-OS" class="headerlink" title="操作系统(OS)"></a>操作系统(OS)</h1><p><em>提供一些基本的操作系统相关函数。</em> <strong>调用这个模块</strong> <code>require(&#39;os&#39;);</code></p>
+<h2 id="os-tmpdir"><a href="#os-tmpdir" class="headerlink" title="os.tmpdir()"></a>os.tmpdir()</h2><p><em>返回操作系统默认的临时文件目录。例：</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-tmpdir.png" alt="os-tmpdir"></p>
+<h2 id="os-endianness"><a href="#os-endianness" class="headerlink" title="os.endianness()"></a>os.endianness()</h2><p><em>返回 CPU 的字节序，可能的是</em> <strong>“BE”</strong> <em>=&gt;(Big endian：将高序字节存储在起始地址) 或 </em> <strong>“LE”</strong> <em>=&gt;(Little endian：将低序字节存储在起始地址)。例：</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-endianness.png" alt="os-endianness"></p>
+<h2 id="os-hostname"><a href="#os-hostname" class="headerlink" title="os.hostname()"></a>os.hostname()</h2><p><em>返回操作系统的主机名。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-hostname.png" alt="os-hostname"></p>
+<h2 id="os-type"><a href="#os-type" class="headerlink" title="os.type()"></a>os.type()</h2><p><em>返回操作系统名称。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-type.png" alt="os-type"></p>
+<h2 id="os-platform"><a href="#os-platform" class="headerlink" title="os.platform()"></a>os.platform()</h2><p><em>返回操作系统平台</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-platform.png" alt="os-platform"></p>
+<h2 id="os-arch"><a href="#os-arch" class="headerlink" title="os.arch()"></a>os.arch()</h2><p><em>返回操作系统 CPU 架构，可能的值有 “x64”、”arm” 和 “ia32”。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-arch.png" alt="os-arch"></p>
+<h2 id="os-release"><a href="#os-release" class="headerlink" title="os.release()"></a>os.release()</h2><p><em>返回操作系统的发行版本。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-release.png" alt="os-release"></p>
+<h2 id="os-uptime"><a href="#os-uptime" class="headerlink" title="os.uptime()"></a>os.uptime()</h2><p><em>返回操作系统运行的时间，以秒为单位。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-uptime.png" alt="os-uptime"></p>
+<h2 id="os-loadavg"><a href="#os-loadavg" class="headerlink" title="os.loadavg()"></a>os.loadavg()</h2><p><em>返回一个包含 1、5、15 分钟平均负载的数组。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-loadavg.png" alt="os-loadavg"></p>
+<h2 id="os-totalmem"><a href="#os-totalmem" class="headerlink" title="os.totalmem()"></a>os.totalmem()</h2><p><em>返回系统内存总量，单位为字节。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-totalmem.png" alt="os-totalmem"></p>
+<h2 id="os-freemem"><a href="#os-freemem" class="headerlink" title="os.freemem()"></a>os.freemem()</h2><p><em>返回操作系统空闲内存量，单位是字节。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-freemem.png" alt="os-freemem"></p>
+<h2 id="os-cpus"><a href="#os-cpus" class="headerlink" title="os.cpus()"></a>os.cpus()</h2><p><em>返回一个对象数组，包含所安装的每个 CPU/内核的信息：型号、速度（单位 MHz）、时间（一个包含 user、nice、sys、idle 和 irq 所使用 CPU/内核毫秒数的对象）。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-cpus.png" alt="os-cpus"></p>
+<h2 id="os-networkInterfaces"><a href="#os-networkInterfaces" class="headerlink" title="os.networkInterfaces()"></a>os.networkInterfaces()</h2><p><em>获取网络接口的一个列表信息：返回一个二维数组，每一个内层数组代表一个网络接口（物理网卡或者虚拟网卡）</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-networkInterface.png" alt="os-networkInterfaces"></p>
+<h2 id="os-EOL"><a href="#os-EOL" class="headerlink" title="os.EOL"></a>os.EOL</h2><p><em>一个定义了操作系统的一行结束的标识的常量。</em><br><em>系统的行结束符是什么，windows为\r\n，unix和unix-like为\n，mac和ios为\r</em></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/31/js打印数组-js打印对象的方法/" itemprop="url">
                   js常用方法整理
                 </a>
@@ -939,7 +1106,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -947,7 +1114,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -956,7 +1123,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
