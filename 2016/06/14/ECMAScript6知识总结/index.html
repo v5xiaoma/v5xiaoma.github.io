@@ -84,22 +84,16 @@
 
 
 
-<meta name="description" content="let和const命令let命令基本用法ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
-1234567&amp;#123;  let a = 10;  var b = 1;&amp;#125;a // ReferenceError: a is not defined.b // 1
-上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码">
+<meta name="description" content="ES6是JavaScript语言的下一个版本，在2014年底正式发布。它对JavaScript做了大量改造，提高了灵活性和应用性，使得这门语言真正成为了企业级开发工具。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ECMAScript6知识总结">
 <meta property="og:url" content="http://v5xiaoma.github.io/2016/06/14/ECMAScript6知识总结/index.html">
 <meta property="og:site_name" content="v5xiaoma">
-<meta property="og:description" content="let和const命令let命令基本用法ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
-1234567&amp;#123;  let a = 10;  var b = 1;&amp;#125;a // ReferenceError: a is not defined.b // 1
-上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码">
-<meta property="og:updated_time" content="2016-06-14T07:53:10.619Z">
+<meta property="og:description" content="ES6是JavaScript语言的下一个版本，在2014年底正式发布。它对JavaScript做了大量改造，提高了灵活性和应用性，使得这门语言真正成为了企业级开发工具。">
+<meta property="og:updated_time" content="2016-06-14T07:55:48.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ECMAScript6知识总结">
-<meta name="twitter:description" content="let和const命令let命令基本用法ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
-1234567&amp;#123;  let a = 10;  var b = 1;&amp;#125;a // ReferenceError: a is not defined.b // 1
-上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码">
+<meta name="twitter:description" content="ES6是JavaScript语言的下一个版本，在2014年底正式发布。它对JavaScript做了大量改造，提高了灵活性和应用性，使得这门语言真正成为了企业级开发工具。">
 
 
 
@@ -396,7 +390,9 @@
       
 
       
-        <h1 id="let和const命令"><a href="#let和const命令" class="headerlink" title="let和const命令"></a>let和const命令</h1><h2 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。</p>
+        <p>ES6是JavaScript语言的下一个版本，在2014年底正式发布。它对JavaScript做了大量改造，提高了灵活性和应用性，使得这门语言真正成为了企业级开发工具。</p>
+<a id="more"></a>
+<h1 id="let和const命令"><a href="#let和const命令" class="headerlink" title="let和const命令"></a>let和const命令</h1><h2 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  let a = 10;</span><br><span class="line">  var b = 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a // ReferenceError: a is not defined.</span><br><span class="line">b // 1</span><br></pre></td></tr></table></figure>
 <p>上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码块之外调用这两个变量，结果let声明的变量报错，var声明的变量返回了正确的值。这表明， <strong>let声明的变量只在它所在的代码块有效</strong>。</p>
 <p>for循环的计数器，就很合适使用let命令。</p>
