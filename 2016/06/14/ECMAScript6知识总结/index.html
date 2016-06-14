@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习,前端,nodejs," />
+  <meta name="keywords" content="学习,前端,javascript," />
 
 
 
@@ -84,30 +84,22 @@
 
 
 
-<meta name="description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。">
+<meta name="description" content="let和const命令let命令基本用法ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+1234567&amp;#123;  let a = 10;  var b = 1;&amp;#125;a // ReferenceError: a is not defined.b // 1
+上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nodejs基础总结">
-<meta property="og:url" content="http://v5xiaoma.github.io/2016/06/01/nodejs基础总结/index.html">
+<meta property="og:title" content="ECMAScript6知识总结">
+<meta property="og:url" content="http://v5xiaoma.github.io/2016/06/14/ECMAScript6知识总结/index.html">
 <meta property="og:site_name" content="v5xiaoma">
-<meta property="og:description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-tmpdir.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-endianness.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-hostname.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-type.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-platform.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-arch.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-release.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-uptime.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-loadavg.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-totalmem.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-freemem.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-cpus.png">
-<meta property="og:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-networkInterface.png">
-<meta property="og:updated_time" content="2016-06-01T08:58:11.353Z">
+<meta property="og:description" content="let和const命令let命令基本用法ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+1234567&amp;#123;  let a = 10;  var b = 1;&amp;#125;a // ReferenceError: a is not defined.b // 1
+上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码">
+<meta property="og:updated_time" content="2016-06-14T07:53:10.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nodejs基础总结">
-<meta name="twitter:description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。">
-<meta name="twitter:image" content="http://o7rtoe1nl.bkt.clouddn.com/os-tmpdir.png">
+<meta name="twitter:title" content="ECMAScript6知识总结">
+<meta name="twitter:description" content="let和const命令let命令基本用法ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+1234567&amp;#123;  let a = 10;  var b = 1;&amp;#125;a // ReferenceError: a is not defined.b // 1
+上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码">
 
 
 
@@ -125,7 +117,7 @@
   };
 </script>
 
-  <title> nodejs基础总结 | v5xiaoma </title>
+  <title> ECMAScript6知识总结 | v5xiaoma </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -305,7 +297,7 @@
             
             
               
-                nodejs基础总结
+                ECMAScript6知识总结
               
             
           </h1>
@@ -317,8 +309,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-01T15:45:54+08:00" content="2016-06-01">
-              2016-06-01
+            <time itemprop="dateCreated" datetime="2016-06-14T15:43:33+08:00" content="2016-06-14">
+              2016-06-14
             </time>
           </span>
 
@@ -355,8 +347,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习/前端/nodejs/" itemprop="url" rel="index">
-                    <span itemprop="name">nodejs</span>
+                  <a href="/categories/学习/前端/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -371,8 +363,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/01/nodejs基础总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/01/nodejs基础总结/" itemprop="commentsCount"></span>
+                <a href="/2016/06/14/ECMAScript6知识总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/14/ECMAScript6知识总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -382,7 +374,7 @@
 
           
           
-             <span id="/2016/06/01/nodejs基础总结/" class="leancloud_visitors" data-flag-title="nodejs基础总结">
+             <span id="/2016/06/14/ECMAScript6知识总结/" class="leancloud_visitors" data-flag-title="ECMAScript6知识总结">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -404,23 +396,21 @@
       
 
       
-        <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。</p>
-<a id="more"></a>
-<h1 id="操作系统-OS"><a href="#操作系统-OS" class="headerlink" title="操作系统(OS)"></a>操作系统(OS)</h1><p><em>提供一些基本的操作系统相关函数。</em> <strong>调用这个模块</strong> <code>require(&#39;os&#39;);</code></p>
-<h2 id="os-tmpdir"><a href="#os-tmpdir" class="headerlink" title="os.tmpdir()"></a>os.tmpdir()</h2><p><em>返回操作系统默认的临时文件目录。例：</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-tmpdir.png" alt="os-tmpdir"></p>
-<h2 id="os-endianness"><a href="#os-endianness" class="headerlink" title="os.endianness()"></a>os.endianness()</h2><p><em>返回 CPU 的字节序，可能的是</em> <strong>“BE”</strong> <em>=&gt;(Big endian：将高序字节存储在起始地址) 或 </em> <strong>“LE”</strong> <em>=&gt;(Little endian：将低序字节存储在起始地址)。例：</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-endianness.png" alt="os-endianness"></p>
-<h2 id="os-hostname"><a href="#os-hostname" class="headerlink" title="os.hostname()"></a>os.hostname()</h2><p><em>返回操作系统的主机名。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-hostname.png" alt="os-hostname"></p>
-<h2 id="os-type"><a href="#os-type" class="headerlink" title="os.type()"></a>os.type()</h2><p><em>返回操作系统名称。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-type.png" alt="os-type"></p>
-<h2 id="os-platform"><a href="#os-platform" class="headerlink" title="os.platform()"></a>os.platform()</h2><p><em>返回操作系统平台</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-platform.png" alt="os-platform"></p>
-<h2 id="os-arch"><a href="#os-arch" class="headerlink" title="os.arch()"></a>os.arch()</h2><p><em>返回操作系统 CPU 架构，可能的值有 “x64”、”arm” 和 “ia32”。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-arch.png" alt="os-arch"></p>
-<h2 id="os-release"><a href="#os-release" class="headerlink" title="os.release()"></a>os.release()</h2><p><em>返回操作系统的发行版本。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-release.png" alt="os-release"></p>
-<h2 id="os-uptime"><a href="#os-uptime" class="headerlink" title="os.uptime()"></a>os.uptime()</h2><p><em>返回操作系统运行的时间，以秒为单位。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-uptime.png" alt="os-uptime"></p>
-<h2 id="os-loadavg"><a href="#os-loadavg" class="headerlink" title="os.loadavg()"></a>os.loadavg()</h2><p><em>返回一个包含 1、5、15 分钟平均负载的数组。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-loadavg.png" alt="os-loadavg"></p>
-<h2 id="os-totalmem"><a href="#os-totalmem" class="headerlink" title="os.totalmem()"></a>os.totalmem()</h2><p><em>返回系统内存总量，单位为字节。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-totalmem.png" alt="os-totalmem"></p>
-<h2 id="os-freemem"><a href="#os-freemem" class="headerlink" title="os.freemem()"></a>os.freemem()</h2><p><em>返回操作系统空闲内存量，单位是字节。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-freemem.png" alt="os-freemem"></p>
-<h2 id="os-cpus"><a href="#os-cpus" class="headerlink" title="os.cpus()"></a>os.cpus()</h2><p><em>返回一个对象数组，包含所安装的每个 CPU/内核的信息：型号、速度（单位 MHz）、时间（一个包含 user、nice、sys、idle 和 irq 所使用 CPU/内核毫秒数的对象）。</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-cpus.png" alt="os-cpus"></p>
-<h2 id="os-networkInterfaces"><a href="#os-networkInterfaces" class="headerlink" title="os.networkInterfaces()"></a>os.networkInterfaces()</h2><p><em>获取网络接口的一个列表信息：返回一个二维数组，每一个内层数组代表一个网络接口（物理网卡或者虚拟网卡）</em><br><img src="http://o7rtoe1nl.bkt.clouddn.com/os-networkInterface.png" alt="os-networkInterfaces"></p>
-<h2 id="os-EOL"><a href="#os-EOL" class="headerlink" title="os.EOL"></a>os.EOL</h2><p><em>一个定义了操作系统的一行结束的标识的常量。</em><br><em>系统的行结束符是什么，windows为\r\n，unix和unix-like为\n，mac和ios为\r</em></p>
+        <h1 id="let和const命令"><a href="#let和const命令" class="headerlink" title="let和const命令"></a>let和const命令</h1><h2 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>ES6新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  let a = 10;</span><br><span class="line">  var b = 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a // ReferenceError: a is not defined.</span><br><span class="line">b // 1</span><br></pre></td></tr></table></figure>
+<p>上面代码在代码块之中，分别用let和var声明了两个变量。然后在代码块之外调用这两个变量，结果let声明的变量报错，var声明的变量返回了正确的值。这表明， <strong>let声明的变量只在它所在的代码块有效</strong>。</p>
+<p>for循环的计数器，就很合适使用let命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (let i = 0; i &lt; arr.length; i++) &#123;&#125;</span><br><span class="line"></span><br><span class="line">console.log(i);</span><br><span class="line">//ReferenceError: i is not defined</span><br></pre></td></tr></table></figure>
+<p>上面代码的计数器i，只在for循环体内有效。</p>
+<p>下面的代码如果使用var，最后输出的是10。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line">for (var i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">  a[i] = function () &#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[6](); // 10</span><br></pre></td></tr></table></figure>
+<p>上面代码中，变量i是var声明的，在全局范围内都有效。所以 <em>每一次循环，新的i值都会覆盖旧值，导致最后输出的是最后一轮的i的值</em> 。</p>
+<p>如果使用let，声明的变量仅在块级作用域内有效，最后输出的是6。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line">for (let i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">  a[i] = function () &#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[6](); // 6</span><br></pre></td></tr></table></figure>
+<p>上面代码中，变量i是let声明的，当前的i只在本轮循环有效，所以 <em>每一次循环的i其实都是一个新的变量，所以最后输出的是6</em> 。</p>
+<h3 id="不存在变量提升"><a href="#不存在变量提升" class="headerlink" title="不存在变量提升"></a>不存在变量提升</h3><p>let不像var那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(foo); // 输出undefined</span><br><span class="line">console.log(bar); // 报错ReferenceError</span><br><span class="line"></span><br><span class="line">var foo = 2;</span><br><span class="line">let bar = 2;</span><br></pre></td></tr></table></figure>
+<p>上面代码中， <em>变量foo用var命令声明，会发生变量提升，即脚本开始运行时，变量foo已经存在了，但是没有值，所以会输出undefined。</em> 变量bar用let命令声明，不会发生变量提升。这表示在声明它之前，变量bar是不存在的，这时如果用到它，就会抛出一个错误。</p>
 
       
     </div>
@@ -446,7 +436,7 @@
           
             <a href="/tags/前端/" rel="tag">#前端</a>
           
-            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
       
@@ -455,17 +445,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/31/js打印数组-js打印对象的方法/" rel="next" title="js常用方法整理">
-                <i class="fa fa-chevron-left"></i> js常用方法整理
+              <a href="/2016/06/06/nodejs简单制作网站信息爬虫/" rel="next" title="nodejs简单制作网站信息爬虫">
+                <i class="fa fa-chevron-left"></i> nodejs简单制作网站信息爬虫
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/06/nodejs简单制作网站信息爬虫/" rel="prev" title="nodejs简单制作网站信息爬虫">
-                nodejs简单制作网站信息爬虫 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -491,8 +477,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/01/nodejs基础总结/"
-           data-title="nodejs基础总结" data-url="http://v5xiaoma.github.io/2016/06/01/nodejs基础总结/">
+      <div class="ds-thread" data-thread-key="2016/06/14/ECMAScript6知识总结/"
+           data-title="ECMAScript6知识总结" data-url="http://v5xiaoma.github.io/2016/06/14/ECMAScript6知识总结/">
       </div>
     
   </div>
@@ -583,7 +569,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统-OS"><span class="nav-number">1.</span> <span class="nav-text">操作系统(OS)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#os-tmpdir"><span class="nav-number">1.1.</span> <span class="nav-text">os.tmpdir()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-endianness"><span class="nav-number">1.2.</span> <span class="nav-text">os.endianness()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-hostname"><span class="nav-number">1.3.</span> <span class="nav-text">os.hostname()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-type"><span class="nav-number">1.4.</span> <span class="nav-text">os.type()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-platform"><span class="nav-number">1.5.</span> <span class="nav-text">os.platform()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-arch"><span class="nav-number">1.6.</span> <span class="nav-text">os.arch()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-release"><span class="nav-number">1.7.</span> <span class="nav-text">os.release()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-uptime"><span class="nav-number">1.8.</span> <span class="nav-text">os.uptime()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-loadavg"><span class="nav-number">1.9.</span> <span class="nav-text">os.loadavg()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-totalmem"><span class="nav-number">1.10.</span> <span class="nav-text">os.totalmem()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-freemem"><span class="nav-number">1.11.</span> <span class="nav-text">os.freemem()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-cpus"><span class="nav-number">1.12.</span> <span class="nav-text">os.cpus()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-networkInterfaces"><span class="nav-number">1.13.</span> <span class="nav-text">os.networkInterfaces()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-EOL"><span class="nav-number">1.14.</span> <span class="nav-text">os.EOL</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#let和const命令"><span class="nav-number">1.</span> <span class="nav-text">let和const命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#let命令"><span class="nav-number">1.1.</span> <span class="nav-text">let命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">1.1.1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不存在变量提升"><span class="nav-number">1.1.2.</span> <span class="nav-text">不存在变量提升</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
